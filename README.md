@@ -20,7 +20,7 @@ O 3ος [Πανελλήνιος Μαθητικός Διαγωνισμός Κυβ
 |   6 | Εκμετάλλευση Δυαδικών Αρχείων | [Ping me](challenge-06-ping-me/writeup/)                                       | Εύκολη   |     33 | [Mike Takaronis](https://x.com/miketakaronis) |
 |   7 | Διάφορα                       | [Beep Beeeeeeeep](challenge-07-beep-beeeeeeeep/writeup/)                       | Μέτρια   |     30 | [GramThanos](https://github.com/GramThanos) |
 |   8 | Παγκόσμιος Ιστός              | [Minesweeper](challenge-08-minesweeper/writeup/)                               | Μέτρια   |     15 | [GramThanos](https://github.com/GramThanos) |
-|   9 | Παγκόσμιος Ιστός              | [Defaced](challenge-09-defaced/)                                               | Εύκολη   |     49 | [GramThanos](https://github.com/GramThanos) |
+|   9 | Παγκόσμιος Ιστός              | [Defaced](challenge-09-defaced/writeup/)                                       | Εύκολη   |     49 | [GramThanos](https://github.com/GramThanos) |
 |  10 | Παγκόσμιος Ιστός              | [Satellite Hijack v1](challenge-10-satellite-hijack-v1/writeup/)               | Εύκολη   |     15 | [Doth-J](https://github.com/Doth-J) |
 |  11 | Παγκόσμιος Ιστός              | [Satellite Hijack v2](challenge-11-satellite-hijack-v2/writeup/)               | Μέτρια   |      4 | [Doth-J](https://github.com/Doth-J) & [GramThanos](https://github.com/GramThanos) |
 |  12 | -                             | Η δοκιμασία αφαιρέθηκε για τεχνικούς λόγους                                    | -        |      - | - |
