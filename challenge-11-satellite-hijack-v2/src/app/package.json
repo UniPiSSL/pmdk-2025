@@ -1,0 +1,24 @@
+{
+  "name": "web-bun",
+  "module": "app.ts",
+  "version": "1.0.0",
+  "type": "module",
+  "author": "Doth-J",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "scripts": {
+    "dev": "bun run --watch  ./app.ts",
+    "start": "bun run ./app.ts"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@elysiajs/html": "^1.2.0",
+    "@elysiajs/jwt": "^1.2.0",
+    "@elysiajs/static": "^1.2.0",
+    "cheerio": "^1.0.0",
+    "elysia": "^1.2.10"
+  }
+}

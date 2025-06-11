@@ -1,0 +1,118 @@
+<div class="container">
+  <script>
+    const satellites = [
+      {
+        ID: "hubble.png",
+        OBJECT_NAME: "Hubble Space Telescope",
+        NORAD_CAT_ID: "20580",
+        LAUNCH_DATE: "1990-04-24",
+        TLE_LINE1:
+          "1 20580U 90037B   23175.18541667  .00000129  00000-0  62817-4 0  9997",
+        TLE_LINE2:
+          "2 20580  28.4716 331.6307 0002652  70.9466 289.1686 15.09149810289640",
+      },
+      {
+        ID: "landsat8.png",
+        OBJECT_NAME: "Landsat 8",
+        NORAD_CAT_ID: "39084",
+        LAUNCH_DATE: "2013-02-11",
+        TLE_LINE1:
+          "1 39084U 13008A   23175.18541667  .00000020  00000-0  50000-4 0  9990",
+        TLE_LINE2:
+          "2 39084  98.1925 200.3411 0001350  73.9644 286.1906 14.57109233273989",
+      },
+      {
+        ID: "terra.png",
+        OBJECT_NAME: "Terra",
+        NORAD_CAT_ID: "25994",
+        LAUNCH_DATE: "1999-12-18",
+        TLE_LINE1:
+          "1 25994U 99068A   23175.18541667  .00000048  00000-0  32772-4 0  9992",
+        TLE_LINE2:
+          "2 25994  98.1992 259.3427 0001300  80.6945 279.4214 14.57189500210918",
+      },
+      {
+        ID: "aqua.jpg",
+        OBJECT_NAME: "Aqua",
+        NORAD_CAT_ID: "27424",
+        LAUNCH_DATE: "2002-05-04",
+        TLE_LINE1:
+          "1 27424U 02022A   23175.18541667  .00000043  00000-0  32218-4 0  9995",
+        TLE_LINE2:
+          "2 27424  98.2098 182.0436 0001128  84.3757 275.7363 14.57199293241250",
+      },
+      {
+        ID: "james_webb.jpg",
+        OBJECT_NAME: "James Webb Space Telescope",
+        NORAD_CAT_ID: "50463",
+        LAUNCH_DATE: "2021-12-25",
+        TLE_LINE1:
+          "1 50463U 21125A   23175.18541667 -.00000023  00000-0  00000+0 0  9998",
+        TLE_LINE2:
+          "2 50463   1.0000 180.0000 0002000   0.0000 360.0000  1.00270000    15",
+      },
+      {
+        ID: "sentinel2A.jpg",
+        OBJECT_NAME: "Sentinel-2A",
+        NORAD_CAT_ID: "40697",
+        LAUNCH_DATE: "2015-06-23",
+        TLE_LINE1:
+          "1 40697U 15028A   23175.18541667  .00000032  00000-0  20620-4 0  9993",
+        TLE_LINE2:
+          "2 40697  98.5716 200.4537 0001450  88.5216 271.4568 14.30709233485123",
+      },
+    ];
+
+    // Function to load satellites into cards
+    function loadSatellites() {
+      const container = document.getElementById("satellite-container");
+
+      satellites.forEach((satellite) => {
+        const column = document.createElement("div");
+        column.classList.add("column");
+        column.classList.add("is-half");
+
+        const card = document.createElement("div");
+        card.classList.add("card");
+
+        card.innerHTML = `
+              <div class="card-image">
+                <figure class="image is-2by1">
+                    <img src="assets/${satellite.ID}" alt="SatelliteImage" />
+                </figure>
+            </div>
+            <div class="card-content">              
+                <p class="title is-4">
+                    <span class="icon-text">
+                        <span class="icon">
+                            <i class="fa-solid fa-satellite"></i>
+                        </span>
+                         ${satellite.OBJECT_NAME}
+                    </span>
+                    </p>
+                <p class="subtitle is-7">
+                    <span class="icon-text">
+                        <span class="icon">
+                            <i class="fa-solid fa-passport"></i>
+                        </span>
+                        NORAD ID: ${satellite.NORAD_CAT_ID}
+                    </span></p>
+                <ul class="">
+                    <li><strong>Launch Date:</strong> ${
+                      satellite.LAUNCH_DATE || "Unknown"
+                    }</li>
+                    <li><strong>TLE Line 1:</strong> ${satellite.TLE_LINE1}</li>
+                    <li><strong>TLE Line 2:</strong> ${satellite.TLE_LINE2}</li>
+                    </ul>
+              </div>
+            `;
+
+        column.appendChild(card);
+        container.appendChild(column);
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", loadSatellites);
+  </script>
+  <div id="satellite-container" class="columns is-multiline"></div>
+</div>

@@ -1,0 +1,8 @@
+To create this challenge:
+1) Run host_ports.py to host ports corresponding to the numeric representation of each character of the flag.
+2) Open Wireshark to listen on loopback traffic.
+3) Run ping_ports.py to generate the traffic (ping requests to each open port).
+4) Stop sniffing, filter on syn packets only and export the filtered packets to a new pcap.
+5) Run the change_data.py to modify IP and MAC addresses to make it look more realistic.
+
+This process will result in the null_traffic.pcap file.

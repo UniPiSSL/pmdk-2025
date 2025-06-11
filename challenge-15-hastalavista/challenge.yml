@@ -1,0 +1,32 @@
+# Required sections
+name: "Hastalavista"
+category: Crypto
+description: "[404] Error! Description was not found.\n\n\nAuthor: [r4sti](https://www.youtube.com/@pliromatics2692)"
+
+author: "r4sti"
+homepage: "https://www.youtube.com/@pliromatics2692"
+
+type: dynamic
+value: 600
+extra:
+    initial: 600
+    minimum: 100
+    decay: 20
+
+flags:
+    - FLAG{h4st4d_br04dc4st_4tt4ck_w1th_c0mb1n4t10ns_h4st4d_br04dc4st_4tt4ck_w1th_c0mb1n4t10ns_0123456789!}
+
+topics:
+    - hastad broadcast attack
+    - chinese remainder theorem
+
+tags:
+    - Μέτρια
+    - Κρυπτογραφία
+    - Crptography
+
+files:
+    - dist/crypto-hastalavista.zip
+
+state: hidden
+version: "0.1"

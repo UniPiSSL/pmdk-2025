@@ -1,0 +1,12 @@
+{
+  "name": "nwbin",
+  "main": "index.html",
+  "node-main": "main.js",
+  "window": {
+    "title": "Terminal",
+    "show": true
+  },
+  "dependencies": {
+    "@xterm/xterm": "^5.5.0"
+  }
+}

@@ -1,0 +1,32 @@
+# Challenge's Metadata
+name: "nwbin"
+category: Rev
+description: "Γρίφος; ... σε δοκιμασία αντίστροφης μηχανικής;\n[rev-nwbin.zip](https://drive.google.com/file/d/15vVd0FCIKNV7qb-S2qs0O03Wi0Qh8dDJ/view?usp=sharing)\n\n\nAuthor: [GramThanos](https://github.com/GramThanos)"
+
+author: "GramThanos"
+homepage: "https://github.com/GramThanos"
+
+type: dynamic
+value: 600
+extra:
+    initial: 600
+    minimum: 100
+    decay: 20
+
+flags:
+    - FLAG{i_tH1nK_I_4m_uNp4cK1nG_l1KE_a_Pr0}
+
+topics:
+    - nw.js
+    - desktop web applicaton
+
+tags:
+    - Mέτρια
+    - Αντίστροφη Mηχανική
+    - Reverse Engineering
+
+#files:
+#    - dist/rev-nwbin.zip
+
+state: hidden
+version: "0.1"

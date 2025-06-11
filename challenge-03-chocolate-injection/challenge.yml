@@ -1,0 +1,36 @@
+# Challenge's Metadata
+name: "Chocolate Injection"
+category: Web
+description: "Έχω μια λιγούρα... ξέρεις κανένα κατάστημα με γλυκά;\n\n\nAuthor: [GramThanos](https://github.com/GramThanos)"
+
+author: "GramThanos"
+homepage: "https://github.com/GramThanos"
+
+type: docker-dynamic
+value: 600
+extra:
+    initial: 600
+    minimum: 100
+    decay: 20
+    docker_image: ctf-pmdk/web:chocolate-injection
+
+deploy:
+    docker_challenges: dist/docker-challenge.tar
+
+flags:
+    - FLAG{Nom-n0m-I-lov3-doNuTs-w1TH-mY-SQL1!}
+
+topics:
+    - PHP
+    - SQLi
+
+tags:
+    - Μέτρια
+    - Παγκόσμιος Ιστός
+    - Web
+
+files:
+    - dist/web-chocolate-injection.zip
+
+state: hidden
+version: "0.1"

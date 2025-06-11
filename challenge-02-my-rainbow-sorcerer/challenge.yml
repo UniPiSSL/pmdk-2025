@@ -1,0 +1,42 @@
+# Challenge's Metadata
+name: "My Rainbow Sorcerer"
+category: Crypto
+description: "Μπορείς να νικήσεις τον Suguru Geto;\n\n\nAuthor: [eid3t1c](https://github.com/eid3t1c)"
+
+author: "eid3t1c"
+homepage: "https://github.com/eid3t1c"
+
+type: docker-dynamic
+value: 600
+extra:
+    initial: 600
+    minimum: 100
+    decay: 20
+    docker_image: ctf-pmdk/crypto:my-rainbow-sorcerer
+
+deploy:
+    docker_challenges: dist/docker-challenge.tar
+
+flags:
+    - FLAG{https://www.youtube.com/watch?v=bU2EvRBUmxc}
+
+topics:
+    - Hash Rainbow Table attack
+    - Programming
+
+tags:
+    - Εύκολη
+    - Κρυπτογραφία
+    - Crptography
+
+files:
+    - dist/crypto-my-rainbow-sorcerer.zip
+
+hints:
+    - {
+        content: "Για να συνδεθείτε στο παιχνίδι χρησιμοποιήστε κάποιο πρόγραμμα σαν το netcat.",
+        cost: 0
+    }
+
+state: hidden
+version: "0.1"

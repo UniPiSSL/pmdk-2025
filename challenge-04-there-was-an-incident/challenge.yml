@@ -1,0 +1,41 @@
+# Challenge's Metadata
+name: "There was an incident!"
+category: Forensics
+description: "Ω Θεέ μου... συνέβη ένα περιστατικό! Κάποιος απέκτησε πρόσβαση στον διακομιστή μας και κρυπτογράφησε τα αρχεία του απόρρητου έργου μας! Χρειαζόμαστε τη βοήθειά σου!\n\nΣυνδέσου στον διακομιστή χρησιμοποιώντας τα: `support:password123`.\n\n\nAuthor: [GramThanos](https://github.com/GramThanos)"
+
+author: "GramThanos"
+homepage: "https://github.com/GramThanos"
+
+type: docker-dynamic
+value: 600
+extra:
+    initial: 600
+    minimum: 100
+    decay: 20
+    docker_image: ctf-pmdk/forensics:there-was-an-incident
+
+deploy:
+    docker_challenges: dist/docker-challenge.tar
+
+flags:
+    - FLAG{c4lm_d0wn!...I_r3c0vered_y0ur_F1L35!}
+
+topics:
+    - Linux
+    - Command History
+    - Unzip
+    - Decrypt
+
+tags:
+    - Εύκολη
+    - Ψηφιακή Εγκληματολογία
+    - Forensics
+
+hints:
+    - {
+        content: "Για να συνδεθείτε στο παιχνίδι χρησιμοποιήστε κάποιο πρόγραμμα για SSH σαν το PuTTY.",
+        cost: 0
+    }
+
+state: hidden
+version: "0.1"

@@ -1,0 +1,41 @@
+# Challenge's Metadata
+name: "Beep Beeeeeeeep"
+category: Misc
+description: "Τι είναι αυτό που φαίνεται στο παρασκήνιο της φωτογραφίας που αναρτήθηκε στα social για τον ΠΜΔΚ 2025; Μοιάζει σαν... όχι δεν δουλεύει...\n\n\nAuthor: [GramThanos](https://github.com/GramThanos)"
+
+author: "GramThanos"
+homepage: "https://github.com/GramThanos"
+
+type: dynamic
+value: 600
+extra:
+    initial: 600
+    minimum: 100
+    decay: 20
+
+flags:
+    - WELLDONEMYFRIENDSTOPYOUFOUNDTHESECRETSTOP
+    - FLAG{WELLDONEMYFRIENDSTOPYOUFOUNDTHESECRETSTOP}
+
+topics:
+    - Γνώσεις επεξεργασίας εικόνας
+    - Γνώσεις αποκωδικοποίησης QR code
+    - Γνώσεις επεξεργασίας ήχου
+    - Γνώσεις αποκωδικοποίησης MORSE code
+
+tags:
+    - Μέτρια
+    - Διάφορα
+    - Miscellaneous
+
+files:
+    - dist/misc-beep-beeeeeeeep.zip
+
+hints:
+    - {
+        content: "Η μορφής της σημαίας για αυτήν τη δοκιμασία είναι [A-Z], για παράδειγμα: THISISANEXAMPLEFLAG",
+        cost: 0
+    }
+
+state: hidden
+version: "0.1"

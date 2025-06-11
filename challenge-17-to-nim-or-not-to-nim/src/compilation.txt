@@ -1,0 +1,1 @@
+nim c --cpu:amd64 -d:mingw -d:strip -d:release --opt:size main.nim

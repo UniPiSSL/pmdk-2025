@@ -1,0 +1,15 @@
+
+html, body {
+	background-color: #f7f2e8;
+}
+.jumbotron {
+	background-color: rgb(241, 221, 203);
+	background-image: url("../css/bg-pattern.png");
+	background-repeat: repeat-x;
+	background-position-x: center;
+	background-position-y: bottom;
+}
+.preview-donuts {
+	background: transparent url("../images/preview.png") center right no-repeat;
+	background-size: contain;
+}

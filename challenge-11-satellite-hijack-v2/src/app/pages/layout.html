@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Satellite Hijack v2</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nova+Square&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+      .space-mono {
+        font-family: "Space Mono", serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      .nova-square {
+        font-family: "Nova Square", serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      .salad-button > i {
+        color: rgba(255, 255, 255, 0.01);
+        transition: transform 1s ease-in, color 1s ease-in;
+      }
+
+      .salad-button:hover > i {
+        transform: rotate(1800deg);
+        color: rgba(255, 0, 0, 0.2);
+        text-shadow: 0px rgba(255, 0, 0, 0.2), 5px rgba(255, 0, 0, 0.2);
+        transition: transform 1s ease-out, color 1.5s ease-out;
+      }
+    </style>
+  </head>
+  <body class="nova-square">
+    <section class="hero has-background-link-dark" style="z-index: 1">
+      <div class="hero-body py-5">
+        <div class="container">
+          <div class="columns">
+            <div class="column">
+              <h1 class="title">
+                <span class="icon-text">
+                  <span class="icon">
+                    <i class="fa-solid fa-satellite-dish"></i>
+                  </span>
+                  <span class="ml-2"> Space Orbital Hub v.2 </span>
+                </span>
+              </h1>
+              <p class="subtitle has-text-white is-italic jersey-15">
+                More Awesome Satellite Orbit Services
+              </p>
+            </div>
+            <div class="column is-4 has-text-right is-align-self-flex-end">
+              <div class="mb-2">
+                <a href="/salad" class="salad-button">
+                  <i class="fa-solid fa-satellite"></i>
+                </a>
+                <span
+                  id="countdown"
+                  class="tag is-gray has-text-weight-bold space-mono"
+                >
+                  Calculating...
+                </span>
+              </div>
+              <span class="icon-text tag is-link">
+                <span class="icon">
+                  <i class="fa-solid fa-key"></i>
+                </span>
+                <div id="coordinates" class="has-text-weight-bold"></div>
+              </span>
+              <span class="icon-text tag is-link mb-2">
+                <div id="user" class="has-text-weight-bold"></div>
+                <span class="icon">
+                  <i class="fa-solid fa-user-astronaut"></i>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container mt-4">
+      <div class="columns">
+        <div class="column is-2">
+          <aside class="menu is-hidden-touch">
+            <h2 class="menu-label">Main Menu</h2>
+            <ul class="menu-list" id="main-menu">
+              <li><a class="link" href="/" id="home-link">Home</a></li>
+              <li>
+                <a class="link" href="/satellites" id="satellites-link"
+                  >Satellites</a
+                >
+              </li>
+              <li>
+                <a class="link" href="/tracking" id="tracking-link"
+                  >Track ISS</a
+                >
+              </li>
+              <li>
+                <a class="link" href="/system" id="system-link">Solar System</a>
+              </li>
+              <li><a class="link" href="/about" id="about-link">About</a></li>
+            </ul>
+          </aside>
+          <aside class="is-hidden-desktop">
+            <div class="tabs is-centered is-small">
+              <ul>
+                <li><a class="link" href="/" id="home-link">Home</a></li>
+                <li>
+                  <a class="link" href="/satellites" id="satellites-link"
+                    >Satellites</a
+                  >
+                </li>
+                <li>
+                  <a class="link" href="/tracking" id="tracking-link"
+                    >Track ISS</a
+                  >
+                </li>
+                <li>
+                  <a class="link" href="/system" id="system-link"
+                    >Solar System</a
+                  >
+                </li>
+                <li><a class="link" href="/about" id="about-link">About</a></li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+        <div class="column" id="content"></div>
+      </div>
+    </div>
+    <script>
+      function updateCountdown(targetDate) {
+        const countdownElement = document.getElementById("countdown");
+        const interval = setInterval(() => {
+          const now = new Date().getTime();
+          const distance = targetDate - now;
+
+          if (distance <= 0) {
+            clearInterval(interval);
+            countdownElement.textContent = "Lunar phase arrived!";
+            return;
+          }
+
+          const months = Math.floor(distance / (1000 * 60 * 60 * 24 * 30));
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          );
+          const minutes = Math.floor(
+            (distance % (1000 * 60 * 60)) / (1000 * 60)
+          );
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          countdownElement.innerHTML = `                  
+          <span class="icon">
+            <i class="fa-solid fa-moon"></i>
+            </span> &bull; ${days}d ${hours}h ${minutes}m ${seconds}s 
+            `;
+        }, 1000);
+      }
+
+      // Set target date for next lunar phase
+      const nextLunarPhase = new Date("2029-12-20T00:00:00Z").getTime();
+      updateCountdown(nextLunarPhase);
+    </script>
+  </body>
+</html>

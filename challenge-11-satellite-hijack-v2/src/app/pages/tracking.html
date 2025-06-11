@@ -1,0 +1,49 @@
+<div class="column">
+  <article class="panel is-link">
+    <p class="panel-heading">
+      <span class="icon is-left">
+        <i class="fa-solid fa-satellite"></i>
+      </span>
+      Query the Orbit
+    </p>
+    <div id="satellite-data" class="panel-block">
+      <span>Click below to search the location of ISS Satellite. </span>
+    </div>
+    <a class="panel-block is-primary" id="fetch-orbit" style="cursor: pointer">
+      <span class="panel-icon">
+        <i class="fas fa-search" aria-hidden="true"></i>
+      </span>
+      Where is ISS?
+    </a>
+  </article>
+</div>
+
+<script>
+  document.getElementById("fetch-orbit").addEventListener("click", async () => {
+    const dataBlock = document.getElementById("satellite-data");
+    try {
+      // Fetch ISS data from the 'Where the ISS at?' API
+      const response = await fetch(
+        "https://api.wheretheiss.at/v1/satellites/25544"
+      );
+      if (!response.ok) throw new Error("Failed to fetch satellite data");
+
+      const data = await response.json();
+
+      // Update the panel with satellite data
+      dataBlock.innerHTML = `
+          <div>
+            <p><strong>Satellite Name:</strong> ISS (International Space Station)</p>
+            <p><strong>Latitude:</strong> ${data.latitude.toFixed(2)}°</p>
+            <p><strong>Longitude:</strong> ${data.longitude.toFixed(2)}°</p>
+            <p><strong>Altitude:</strong> ${data.altitude.toFixed(2)} km</p>
+            <p><strong>Velocity:</strong> ${data.velocity.toFixed(2)} km/h</p>
+          </div>
+        `;
+    } catch (error) {
+      dataBlock.innerHTML = `
+          <p class="has-text-danger">Failed to fetch data. Please try again.</p>
+        `;
+    }
+  });
+</script>

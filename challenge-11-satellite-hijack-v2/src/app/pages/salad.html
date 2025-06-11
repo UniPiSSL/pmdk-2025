@@ -1,0 +1,68 @@
+<div class="column">
+  <article class="panel is-danger">
+    <p class="panel-heading">
+      <span class="icon is-left">
+        <i class="fa-solid fa-satellite"></i>
+      </span>
+      SAtellite-LAser Digest
+    </p>
+    <div class="panel-block">
+      <p class="control">
+        <textarea
+          id="laser-input"
+          class="textarea is-gray is-danger"
+          type="text"
+          placeholder="Data input, use comma and space [', '] for multiple data"
+        ></textarea>
+      </p>
+    </div>
+    <div id="satellite-data" class="panel-block">
+      <span>Click below to hash the input. Don't use near microwaves!</span>
+    </div>
+    <a class="panel-block is-primary" id="laser-hash" style="cursor: pointer">
+      <span class="panel-icon">
+        <i class="fas fa-bolt" aria-hidden="true"></i>
+      </span>
+      Fire Laser
+    </a>
+  </article>
+</div>
+<script>
+  document.getElementById("laser-hash").addEventListener("click", async () => {
+    const textArea = document.getElementById("laser-input");
+    const dataBlock = document.getElementById("satellite-data");
+    const inputData = textArea.value;
+
+    if (inputData == "") {
+      dataBlock.innerHTML = "Enter some data to digest!";
+      return;
+    }
+
+    try {
+      // Send POST request to /hash with the input data
+      const response = await axios.post("/hash", { data: inputData });
+      const result = response.data.hash;
+      // Check if result is an array or a single value
+      if (Array.isArray(result)) {
+        dataBlock.innerHTML = `
+            <ul class="columns is-multiline">
+              ${result
+                .map((hash) => `<li class="column">${hash}</li>`)
+                .join("")}
+            </ul>
+          `;
+      } else {
+        dataBlock.innerHTML = `
+            <p><strong>Hashed Data:</strong> ${result}</p>
+          `;
+      }
+    } catch (error) {
+      console.log(error);
+      // Handle errors and update the panel with a message
+      dataBlock.innerHTML = `
+          <p class="has-text-danger">Error: ${
+            error.response?.data?.message || error.message
+          }</p>`;
+    }
+  });
+</script>

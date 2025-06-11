@@ -1,0 +1,32 @@
+# Challenge's Metadata
+name: "Quarantine"
+category: Forensics
+description: "Πριν μερικές μέρες είχα κατεβάσει κάποια αρχεία στον υπολογιστή μου, όμως σήμερα φαίνεται πως δεν υπάρχουν πουθενά. Ένας φίλος μου με ενημέρωσε πως μερικές φορές το Windows Defender σβήνει αρχεία επειδή τα θεωρεί κακόβουλα. Σου παραθέτω 1 κρυπτογραφημένο αρχείο απο την καραντίνα του Windows Defender. Μπορείς να με βοηθήσεις να το ανακτήσω;\n\n\nAuthor: vipolus"
+
+author: "vipolus"
+homepage: "https://github.com/vipolus"
+
+type: dynamic
+value: 600
+extra:
+    initial: 600
+    minimum: 100
+    decay: 20
+
+flags:
+    - FLAG{D3cRypT1ng_Qu4raNt1n3d_F1l3s_1S_FuN}
+
+topics:
+    - NA
+
+tags:
+    - Μέτρια
+    - Digital Forensics
+    - Ψηφιακή Εγκληματολογία
+    
+
+files:
+    - dist/forensics-quarantine.zip
+
+state: hidden
+version: "0.1"

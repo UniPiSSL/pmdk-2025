@@ -1,0 +1,31 @@
+# Challenge's Metadata
+name: "It is all about da strings"
+category: Rev
+description: "Μπορείς να βρεις τον μυστικό κωδικό για να πάρεις πρόσβαση;\n\n\nAuthor: [GramThanos](https://github.com/GramThanos)"
+
+author: "GramThanos"
+homepage: "https://github.com/GramThanos"
+
+type: dynamic
+value: 600
+extra:
+    initial: 600
+    minimum: 100
+    decay: 20
+
+flags:
+    - FLAG{w3l1_tH1s_w4S_nOT_th4T_hArD}
+
+topics:
+    - Strings
+
+tags:
+    - Εύκολη
+    - Αντίστροφη Mηχανική
+    - Reverse Engineering
+
+files:
+    - dist/rev-it-is-all-about-da-strings.zip
+
+state: hidden
+version: "0.1"

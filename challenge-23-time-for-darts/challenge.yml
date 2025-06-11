@@ -1,0 +1,37 @@
+# Challenge's Metadata
+name: "Time for darts"
+category: Misc
+description: "Ένας διαγωνισμός ξεκινάει... Μπορείς να κρατάς την βαθμολογία;\n\n\nAuthor: [Olga S](https://en.wikipedia.org/wiki/Null_device)"
+
+author: "Olga S"
+
+type: docker-dynamic
+value: 600
+extra:
+    initial: 600
+    minimum: 100
+    decay: 20
+    docker_image: ctf-pmdk/programming:time-for-darts
+
+deploy:
+    docker_challenges: dist/docker-challenge.tar
+
+flags:
+    - FLAG{N3W-e-D4RT-M4ST3R-1n-Th3-h0use!}
+
+topics:
+    - TCP Bot
+
+tags:
+    - Μέτρια
+    - Διάφορα
+    - Miscellaneous
+
+hints:
+    - {
+        content: "Για να συνδεθείτε στο παιχνίδι χρησιμοποιήστε κάποιο πρόγραμμα σαν το netcat.",
+        cost: 0
+    }
+
+state: hidden
+version: "0.1"

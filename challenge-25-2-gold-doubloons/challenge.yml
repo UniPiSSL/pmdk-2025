@@ -1,0 +1,45 @@
+# Challenge's Metadata
+name: "2 Gold Doublons"
+category: Misc
+description: "Όχι 1... 2\n\n\nAuthor: [eid3t1c](https://github.com/eid3t1c)"
+
+author: "eid3t1c"
+homepage: "https://github.com/eid3t1c"
+
+type: docker-dynamic
+value: 600
+extra:
+    initial: 600
+    minimum: 100
+    decay: 20
+    docker_image: ctf-pmdk/crypto:2-gold-doublons
+
+deploy:
+    docker_challenges: dist/docker-challenge.tar
+
+flags:
+    - FLAG{Th3_Sh3ll_h45_Sp0k3n:2_Gold_Doubloons-https://www.youtube.com/watch?v=m8uOLoxKFrQ}
+
+topics:
+    - Python Jail Break
+
+tags:
+    - Μέτρια
+    - Διάφορα
+    - Miscellaneous
+
+files:
+    - dist/misc-2-gold-doublons.zip
+
+hints:
+    - {
+        content: "Για να συνδεθείτε στο παιχνίδι χρησιμοποιήστε κάποιο πρόγραμμα σαν το netcat.",
+        cost: 0
+    }
+    - {
+        content: "Το flag βρίσκεται στο αρχείο `S3cr3t_Fl4g.txt`.",
+        cost: 0
+    }
+
+state: hidden
+version: "0.1"

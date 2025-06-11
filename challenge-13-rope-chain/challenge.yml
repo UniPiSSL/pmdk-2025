@@ -1,0 +1,40 @@
+name: "Rope Store"
+category: Pwn
+description: "Ropes in low prices for everyone!\n\n\nAuthor: [Mike Takaronis](https://x.com/miketakaronis)"
+
+author: "Mike Takaronis"
+homepage: "https://x.com/miketakaronis"
+
+type: docker-dynamic
+value: 600
+extra:
+    initial: 600
+    minimum: 100
+    decay: 20
+    docker_image: ctf-pmdk/pwn:rope-store
+
+deploy:
+    docker_challenges: dist/docker-challenge.tar
+
+flags:
+    - FLAG{rop3-ch41n-g03s-brrrr}
+
+topics:
+    - ΝΑ
+
+tags:
+    - Δύσκολη
+    - Εκμετάλλευση Δυαδικών Αρχείων
+    - pwn
+
+files:
+    - dist/pwn-rope-store.zip
+
+hints:
+    - {
+        content: "Για να συνδεθείτε στο παιχνίδι χρησιμοποιήστε κάποιο πρόγραμμα σαν το netcat.",
+        cost: 0
+    }
+
+state: hidden
+version: "0.1"

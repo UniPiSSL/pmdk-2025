@@ -1,0 +1,39 @@
+# Challenge's Metadata
+name: Satellite Hijack v1
+category: Web
+description: "Satellites guard the prize, Frank left a little puzzle for you. Can you solve it?\n\n\nAuthor: [Doth-J](https://github.com/Doth-J)"
+
+author: Doth-J
+homepage: "https://github.com/Doth-J"
+
+type: docker-dynamic
+value: 600
+extra:
+    initial: 600
+    minimum: 100
+    decay: 20
+    docker_image: ctf-pmdk/web:satellite-hijack-v1
+
+deploy:
+    docker_challenges: dist/docker-challenge.tar
+
+flags:
+    - FLAG{Th3-C4k3-1s-4-L13}
+
+topics:
+    - Typescript
+    - Bun
+    - ElysiaJS
+    - Γνώσεις χειραγώγισης Header
+    - Γνώσεις χειραγώγισης Cookie
+
+tags:
+    - Εύκολη
+    - Παγκόσμιος Ιστός
+    - Web
+
+files:
+    - dist/web-satellite-hijack-v1.zip
+
+state: hidden
+version: "0.1"

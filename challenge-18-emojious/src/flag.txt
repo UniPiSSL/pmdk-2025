@@ -1,0 +1,1 @@
+FLAG{emojis_are_really_special_these_days}

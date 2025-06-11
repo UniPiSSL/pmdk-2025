@@ -1,0 +1,40 @@
+name: "Ping me"
+category: Pwn
+description: "Ping this, ping that, ping everything..\n\n\nAuthor: [Mike Takaronis](https://x.com/miketakaronis)"
+
+author: "Mike Takaronis"
+homepage: "https://x.com/miketakaronis"
+
+type: docker-dynamic
+value: 600
+extra:
+    initial: 600
+    minimum: 100
+    decay: 20
+    docker_image: ctf-pmdk/pwn:ping-me
+
+deploy:
+    docker_challenges: dist/docker-challenge.tar
+
+flags:
+    - FLAG{1_d4r3_y0u_t0_p1ng_th3_un1v3rs3_4nd_c0nv1nc3_1t_t0_r3ply}
+
+topics:
+    - ΝΑ
+
+tags:
+    - Εύκολη
+    - Εκμετάλλευση Δυαδικών Αρχείων
+    - pwn
+
+files:
+    - dist/pwn-ping-me.zip
+
+hints:
+    - {
+        content: "Για να συνδεθείτε στο παιχνίδι χρησιμοποιήστε κάποιο πρόγραμμα σαν το netcat.",
+        cost: 0
+    }
+
+state: hidden
+version: "0.1"

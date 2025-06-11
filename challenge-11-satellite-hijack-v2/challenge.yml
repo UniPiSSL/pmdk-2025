@@ -1,0 +1,40 @@
+# Challenge's Metadata
+name: Satellite Hijack v2
+category: Web
+description: "Frank left another satellite puzzle for you. Can you not crack it?\n\n\nAuthor: [Doth-J](https://github.com/Doth-J) & [GramThanos](https://github.com/GramThanos)"
+
+author: Doth-J & GramThanos
+homepage: "https://github.com/Doth-J"
+
+type: docker-dynamic
+value: 600
+extra:
+    initial: 600
+    minimum: 100
+    decay: 20
+    docker_image: ctf-pmdk/web:satellite-hijack-v2
+
+deploy:
+    docker_challenges: dist/docker-challenge.tar
+
+flags:
+    - FLAG{b34m-M3-up-Sc0tty}
+
+topics:
+    - Bun
+    - Typescript
+    - ElysiaJS
+    - Γνώσεις Κατακερματισμου (Hashing)
+    - Γνώσεις χειραγώγισης Header
+    - Γνώσεις Rotating Keys
+
+tags:
+    - Μέτρια
+    - Παγκόσμιος Ιστός
+    - Web
+
+files:
+    - dist/web-satellite-hijack-v2.zip
+
+state: hidden
+version: "0.1"

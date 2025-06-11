@@ -1,0 +1,32 @@
+
+name: "Best Wishes"
+category: Crypto
+description: "[404] Error! Description was not found.\n\n\nAuthor: [r4sti](https://www.youtube.com/@pliromatics2692)"
+
+author: "r4sti"
+homepage: "https://www.youtube.com/@pliromatics2692"
+
+type: dynamic
+value: 600
+extra:
+    initial: 600
+    minimum: 100
+    decay: 20
+
+flags:
+    - FLAG{4ny_l34k_1s_s3r10us_l34k!}
+
+topics:
+    - greatest common divisor
+    - rsa modulus factorisation
+
+tags:
+    - Εύκολη
+    - Κρυπτογραφία
+    - Crptography
+
+files:
+    - dist/crypto-best-wishes.zip
+
+state: hidden
+version: "0.1"

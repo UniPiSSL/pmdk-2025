@@ -1,0 +1,31 @@
+# Challenge's Metadata
+name: "Emojious"
+category: Rev
+description: "I am pretty sure you are using emojis everyday..\n\n\nAuthor: [Mike Takaronis](https://x.com/miketakaronis)"
+
+author: "Mike Takaronis"
+homepage: "https://x.com/miketakaronis"
+
+type: dynamic
+value: 600
+extra:
+    initial: 600
+    minimum: 100
+    decay: 20
+
+flags:
+    - FLAG{emojis_are_really_special_these_days}
+
+topics:
+    - NA
+
+tags:
+    - Easy
+    - Αντίστροφη Mηχανική
+    - Reverse Engineering
+
+files:
+    - dist/rev-emojious.zip
+
+state: hidden
+version: "0.1"

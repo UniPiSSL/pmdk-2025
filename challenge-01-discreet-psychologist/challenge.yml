@@ -1,0 +1,33 @@
+# Challenge's Metadata
+name: "Discreet Psychologist"
+category: Crypto
+description: "Η συνταγή του ψυχολόγου μου δεν βγάζει νόημα. Μακάρι να μπορούσα να βρω τη λογαριθμική πίσω από αυτήν...\n\n\nAuthor: [eid3t1c](https://github.com/eid3t1c)"
+
+author: "eid3t1c"
+homepage: "https://github.com/eid3t1c"
+
+type: dynamic
+value: 600
+extra:
+    initial: 600
+    minimum: 100
+    decay: 20
+
+flags:
+    - FLAG{https://www.youtube.com/watch?v=RBtlPT23PTM}
+
+topics:
+    - Discrete Log
+    - Factorization
+    - Kinda Diffie Hellman
+
+tags:
+    - Μέτρια
+    - Κρυπτογραφία
+    - Crptography
+
+files:
+    - dist/crypto-discreet-psychologist.zip
+
+state: hidden
+version: "0.1"

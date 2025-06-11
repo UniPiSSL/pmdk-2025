@@ -1,0 +1,34 @@
+# Challenge's Metadata
+name: "To Nim or Not to Nim"
+category: Rev
+description: "Ιδού η απορία ...\n\n\nAuthor: [r4sti](https://www.youtube.com/@pliromatics2692)"
+
+author: "r4sti"
+homepage: "https://www.youtube.com/@pliromatics2692"
+
+type: dynamic
+value: 600
+extra:
+    initial: 600
+    minimum: 100
+    decay: 20
+
+flags:
+    - FLAG{c0ngr4tul4t10ns___w3lc0m3_t0_th3_f4sc1n4t1ng_w0rld_0f_r3v3rs3_3ng1n33r1ng:D}
+
+topics:
+    - Nim reversing
+    - Stripped symbols
+    - CRC32 checksum
+    - crackme
+
+tags:
+    - Δύσκολη
+    - Αντίστροφη Mηχανική
+    - Reverse Engineering
+
+files:
+    - dist/rev-to-nim-or-not-to-nim.zip
+
+state: hidden
+version: "0.1"

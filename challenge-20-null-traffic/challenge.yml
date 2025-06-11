@@ -1,0 +1,32 @@
+# Challenge's Metadata
+name: "Null Traffic"
+category: Forensics
+description: "Ύστερα από ύποπτη δραστηριότητα από έναν από τους υπολογιστές της εταιρίας μας, καταγράψαμε την κυκλοφορία δικτύου του. Αναλύοντας το παραγόμενο αρχείο, παρατηρήσαμε ότι επικοινωνεί με μια συγκεκριμένη διεύθυνση, όμως τα πακέτα που στέλνει είναι κενά. Η υποψία μας είναι πως προσπαθεί να αποστείλει κρυφά δεδομένα στην συγκεκριμένη διεύθυνση. Μπορείς να το επιβεβαιώσεις;\n\n\nAuthor: [Σολωμός Άγγελος @scholar of Latsis Foundation, @scholar of HelleniQ Energy](https://github.com/connar)"
+
+author: "Σολωμός Άγγελος @scholar of Latsis Foundation, @scholar of HelleniQ Energy"
+homepage: "https://github.com/connar"
+
+type: dynamic
+value: 600
+extra:
+    initial: 600
+    minimum: 100
+    decay: 20
+
+flags:
+    - FLAG{5n34ky_p027_3xf1lt24710n}
+
+topics:
+    - Wireshark
+    - Data exfiltration
+
+tags:
+    - Εύκολη
+    - Digital Forensics
+    - Ψηφιακή Εγκληματολογία
+
+files:
+    - dist/forensics-null-traffic.zip
+
+state: hidden
+version: "0.1"

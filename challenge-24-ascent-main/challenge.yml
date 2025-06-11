@@ -1,0 +1,31 @@
+# Challenge's Metadata
+name: "Ascent Main"
+category: Rev
+description: "Φήμες λένε οτι κανείς απο τους μαθητές μου δεν κατάφερε να πάρει 10!\n\n\nAuthor: [Filippos Floros](https://github.com/YoungFlexerGR)"
+
+author: "Filippos Floros"
+homepage: "https://github.com/YoungFlexerGR"
+
+type: dynamic
+value: 600
+extra:
+    initial: 600
+    minimum: 100
+    decay: 20
+
+flags:
+    - FLAG{ASM_!S_UND3RATT3D_1337}
+
+topics:
+    - x86-64
+
+tags:
+    - Mέτρια
+    - Αντίστροφη Mηχανική
+    - Reverse Engineering
+
+files:
+    - dist/rev-ascent-main.zip
+
+state: hidden
+version: "0.1"

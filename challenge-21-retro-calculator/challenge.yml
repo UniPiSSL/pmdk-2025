@@ -1,0 +1,34 @@
+# Challenge's Metadata
+name: "Retro Calculator"
+category: Forensics
+description: "Πρόσφατα κατέβασα από το ίντερνετ μια εφαρμογή calculator η οποία υποσχόταν μια εμφάνιση retro. Το μόνο πρόβλημα που έχει αυτή η εφαρμογή είναι ότι όποτε κάνω μια πράξη, ένα μπλε παράθυρο εμφανίζεται και εξαφανίζεται στιγμιαία. Δεν είμαι σίγουρος αν η εφαρμογή έχει κάποιο λειτουργικό θέμα. Μπορείς να το ερευνήσεις;\n\nΟ κωδικός του zip είναι: PMDK2025\n\n\nAuthor: [Σολωμός Άγγελος @scholar of Latsis Foundation, @scholar of HelleniQ Energy](https://github.com/connar)"
+
+author: "Σολωμός Άγγελος @scholar of Latsis Foundation, @scholar of HelleniQ Energy"
+homepage: "https://github.com/connar"
+
+type: dynamic
+value: 600
+extra:
+    initial: 600
+    minimum: 100
+    decay: 20
+
+flags:
+    - FLAG{Unr4v3l1n9_53c2375_1n51d3_234l_w02ld_700l5}
+
+topics:
+    - HTA
+    - Powershell
+    - Obfuscation
+
+tags:
+    - Δύσκολη
+    - Digital Forensics
+    - Ψηφιακή Εγκληματολογία
+    
+
+files:
+    - dist/forensics-retro-calculator.zip
+
+state: hidden
+version: "0.1"
