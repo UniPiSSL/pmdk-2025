@@ -22,7 +22,7 @@
 
 Ενδεικτικά δίνεται ένα τέτοιο scipt:
 
-```
+```python
 #!/usr/bin/env python3
 import time
 import sys
